@@ -1,0 +1,236 @@
+/* mPaginate */
+
+.settings-border .mPaginate {
+  position: relative;
+  font-family: 'Malgun', sans-serif;
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 32px 0 40px;
+  margin: 0 auto;
+  text-align: center;
+  min-width: 300px;
+}
+
+.mPaginate li a,
+.mPaginate strong,
+.mPaginate li span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #444B59;
+  text-decoration: none;
+  padding: 0 9px;
+  font-weight: 400;
+}
+
+.mPaginate ol,
+.mPaginate li {
+  display: inline-block;
+  margin: 0 4px;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.mPaginate a:hover {
+  background-color: #F4F9FF;
+}
+
+.mPaginate ol li a:active,
+.mPaginate ol li a:focus,
+.mPaginate ol li strong {
+  color: #FFFFFF;
+  background-color: #3971FF;
+}
+
+.mPaginate .prev,
+.mPaginate .next,
+.mPaginate .first,
+.mPaginate .last {
+  overflow: hidden;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  vertical-align: middle;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  border: 1px solid #D6DAE1;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.mPaginate .prev {
+  margin: 0 4px 0 0;
+}
+
+.mPaginate .next {
+  margin: 0 0 0 4px;
+}
+
+.mPaginate .prev::before,
+.mPaginate .next::before,
+.mPaginate .first::before,
+.mPaginate .last::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  vertical-align: middle;
+  border-left: 2px solid #444B59;
+  border-bottom: 2px solid #444B59;
+  border-radius: 1px;
+}
+
+.mPaginate .prev::before {
+  margin: 8px -3px 0 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mPaginate .next::before {
+  margin: 8px 0 0 -1px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.mPaginate .first::before {
+  margin: 3px 0 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mPaginate .last::before {
+  margin: 3px 0 0;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.mPaginate .first::after,
+.mPaginate .last::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  margin: 3px 0 0;
+  vertical-align: middle;
+  background-color: #2C2C2C;
+}
+
+.mPaginate .first::after {
+  margin: 3px 1px 0 -11px;
+}
+
+.mPaginate .last::after {
+  margin: 3px 3px 0;
+}
+
+/* Feed table */
+.feed-table__table-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  position: relative;
+  margin-top: 31px;
+}
+
+.feed-table__table-pagination::before {
+  content: '';
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  height: 15px;
+  background-color: #FAFAFB;
+  top: -32px;
+  border: 1px solid #E6E8EB;
+}
+
+.feed-table__table-pagination::after {
+  content: '';
+  position: absolute;
+  background-size: cover;
+  top: -27px;
+  width: 10px;
+  height: 5px;
+  background-image: url('../../../img/divider-logo.svg');
+}
+
+.feed-table__table-pagination a {
+  display: inline-block;
+}
+
+.feed-table__table-pagination a:hover {
+  text-decoration: none;
+}
+
+.pagination__link-prev,
+.pagination__link-next {
+  position: relative;
+  border: 1px solid #D6DAE1;
+}
+
+.pagination__link-prev img,
+.pagination__link-next img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.feed-table__table-pagination .dataTables_paginate .paginate_button.current,
+.feed-table__table-pagination .dataTables_paginate .paginate_button:active {
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 0;
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+
+.pagination__link.active:hover {
+  color: #000000;
+}
+
+.feed-table__table-pagination .dataTables_paginate .paginate_button {
+  color: #444B59 !important;
+  text-align: center;
+  font-size: 14px;
+  line-height: 23px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 0;
+}
+
+.feed-table__table-pagination .dataTables_paginate .paginate_button.previous {
+  margin-right: 15px;
+  border: 1px solid #D6DAE1;
+}
+
+.feed-table__table-pagination .dataTables_paginate .paginate_button.next {
+  margin-left: 15px;
+  border: 1px solid #D6DAE1;
+}
+
+.pagination__link,
+.pagination__link-prev,
+.pagination__link-next {
+  text-decoration: none;
+  color: #000000;
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+  line-height: 24px;
+  text-align: center;
+  transition: all ease-in-out 300ms;
+}
+
+.feed-table__table-pagination .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: #F4F9FF;
+  color: #444B59 !important;
+  border: 1px solid #F4F9FF;
+}

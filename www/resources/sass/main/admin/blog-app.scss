@@ -1,0 +1,9 @@
+.blogFeed .feedCount {
+   line-height: 5;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

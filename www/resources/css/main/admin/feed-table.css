@@ -1,0 +1,199 @@
+.dataTables_wrapper {
+  margin: 0 16px;
+  font-family: 'Dotum', sans-serif !important;
+  font-size: 12px;
+}
+
+.feed-table td {
+  vertical-align: middle;
+  text-align: center;
+  height: 44px;
+  border: 1px solid #E6E8EB;
+}
+
+.feed-table__header img {
+  margin-bottom: 3px;
+}
+
+.feed-table__count-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 8px;
+  border: 1px solid #E6E8EB;
+}
+
+.feed-table__title a:hover,
+.feed-table__description:hover {
+  color: #3971FF;
+  text-decoration: none;
+}
+
+.feed-table__buttons-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border: 1px solid #E6E8EB;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.feed-table__header--feed-title,
+.feed-table__header--feed-list-desc,
+.feed-table__header--feed-list-title {
+  text-align: left;
+}
+
+table.dataTable thead th.feed-table__checkbox-head {
+  padding: 0;
+}
+
+table.dataTable thead th.feed-table__header {
+  font-weight: 400;
+  height: 44px;
+  vertical-align: middle;
+  background-color: #FAFAFB;
+  border: 1px solid #E6E8EB;
+  border-top: 0;
+  border-bottom: 0;
+  position: relative;
+  color: #1B1E26;
+}
+
+table.dataTable thead .sorting {
+  background-image: none;
+}
+
+table.dataTable thead:first-child th.sorting::after {
+  content: '';
+  display: inline-block;
+  top: 47%;
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  background-image: url('../../../img/table-sort-icon-down.svg');
+}
+
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc {
+  background-image: none !important;
+}
+
+table.dataTable thead:first-child th.sorting_asc.sorting::after {
+  transform: rotate(180deg);
+  top: 37%;
+}
+
+table.dataTable thead th.feed-table__header span {
+  position: relative;
+  left: -4px;
+  overflow-wrap: normal;
+}
+
+table.dataTable thead:first-child th.sorting.feed-table__header--feed-created::after {
+  right: 23px;
+}
+
+table.dataTable thead:first-child th.sorting.feed-table__header--feed-blog::after {
+  right: 13px;
+}
+
+table.dataTable thead:first-child th.sorting.feed-table__header--feed-store::after {
+  right: 13px;
+}
+
+table.dataTable thead:first-child th.sorting.feed-table__header--feed-title::after {
+  left: 75px;
+}
+
+table.dataTable thead:first-child th.sorting.feed-table__header--feed-action::after {
+  right: 9px;
+}
+
+table.dataTable thead:first-child th.sorting.feed-table__header--feed-display::after {
+  right: 9px;
+}
+
+/* Blog post list table */
+table.dataTable thead th.feed-table__header.feed-table__header--feed-thumb span {
+  left: -14px;
+}
+
+table.dataTable thead:first-child th.sorting.feed-table__header--feed-thumb::after {
+  right: 2px;
+}
+
+.feed-table__thumbnail {
+  position: relative;
+}
+
+.feed-table__thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  border: 1px solid #E1E6ED;
+}
+
+/* For loader / refresh button click  */
+#feed-table_processing {
+  z-index: 50;
+}
+
+/* Disabled row */
+table.dataTable tbody tr.disabled-row {
+  background-color: #FAFAFB;
+}
+
+/* Selected row */
+table.dataTable tbody tr.selected-row {
+  background-color: #F4F9FF;
+}
+
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable.no-footer {
+  border-bottom: 0;
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+  border-bottom: 1px solid #E6E8EB;
+  border-top: 1px solid #E6E8EB;
+}
+
+/* Missing blog post */
+table.dataTable tbody tr.missing-post-row {
+  background-color: #FEEEF0;
+  cursor: pointer;
+}
+
+.missing-post-row .slider.big.toggle-subtle--styleB.switchB--table::before {
+  left: 1px !important;
+}
+
+table.dataTable tbody tr.missing-post-row .switchB,
+table.dataTable tbody tr.missing-post-row .feed-table__description,
+table.dataTable tbody tr.missing-post-row .feed-table__checkbox-head {
+  pointer-events: none;
+}
+
+/* Edit button */
+.feed-button--edit-post,
+.feed-button--edit-post-save {
+  display: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.feed-table__description {
+  position: relative;
+}
+
+/* Hover to show edit button */
+
+.feed-table__text-hover {
+  cursor: pointer;
+}

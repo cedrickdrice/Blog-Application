@@ -1,0 +1,28 @@
+#swal2-html-container {
+  font-family: 'Dotum', sans-serif;
+}
+
+.swal2-container.alerts__switch-container {
+  top: -6px;
+  margin: 0 auto;
+}
+
+.swal2-container.swal2-backdrop-show.alerts__switch-container {
+  background: transparent;
+}
+
+.alerts__switch-container .swal2-html-container {
+  margin: 0;
+  line-height: 18px;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.swal2-container.swal2-top > .swal2-popup.alert__switch-popup {
+  top: 20px;
+  height: 42px;
+  width: 209px;
+  padding: 12px 24px;
+  border: 1px solid #D6DAE1;
+  border-radius: 0;
+}

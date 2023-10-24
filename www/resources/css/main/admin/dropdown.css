@@ -1,0 +1,232 @@
+/* mSelect */
+button {
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+.mSelect {
+  font-family: 'Dotum', sans-serif;
+  display: inline-block;
+  position: relative;
+  height: 28px;
+  color: #1B1E26;
+  vertical-align: middle;
+  margin: 8px;
+  width: 150px;
+}
+
+.mSelect a {
+  color: #1B1E26;
+  text-decoration: none;
+}
+
+.mSelect li {
+  padding: 0;
+}
+
+.mSelect .value {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 28px;
+  padding: 5px 8px;
+  font-size: 12px;
+  border: 1px solid #D6DAE1;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-radius: 4px;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.mSelect .value.required-field {
+  border: 1px solid #DC2C2C;
+  color: #DC2C2C;
+}
+
+.mSelect:hover .value.required-field {
+  border: 1px solid #DC2C2C;
+}
+
+.mSelect:hover .value {
+  border-color: #3971FF;
+}
+
+.mSelect.disabled:hover .value {
+  border-color: #D6DAE1;
+}
+
+.mSelect .cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  font-size: 1px;
+  line-height: 0;
+  color: transparent;
+  white-space: nowrap;
+  text-align: right;
+  text-indent: 150%;
+}
+
+.mSelect .cover::after {
+  content: '';
+  position: absolute;
+  right: 13px;
+  top: 9px;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-bottom: 2px solid #667084;
+  border-right: 2px solid #667084;
+  border-radius: 1px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mSelect .dropdown {
+  overflow: hidden;
+  position: absolute;
+  top: 28px;
+  left: 0;
+  z-index: 10;
+  min-width: 100%;
+  height: 0;
+  border: 1px solid #D4D4D4;
+  border-top: none;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+.mSelect .option {
+  overflow-y: auto;
+  max-height: 200px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.mSelect .option li > a {
+  display: block;
+  padding: 5px 8px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.mSelect .option li > a:hover {
+  text-decoration: none;
+}
+
+.mSelect .option li:hover {
+  background: #EDF3FF;
+}
+
+.mSelect .option li.selected > a {
+  font-weight: bold;
+}
+
+.mSelect.gFull {
+  width: 100%;
+}
+
+/* open */
+.mSelect.open .value {
+  border-color: #000000;
+}
+
+.mSelect.open .cover::after {
+  top: 13px;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.mSelect.open .dropdown {
+  overflow: visible;
+  height: auto;
+  opacity: 1;
+  -webkit-box-shadow: 0 5px 5px 0 rgba(238 238238);
+  -moz-box-shadow: 0 5px 5px 0 rgba(238 238 238);
+  -ms-box-shadow: 0 5px 5px 0 rgba(238 238 238);
+  box-shadow: 0 5px 5px 0 rgba(238 238 238);
+}
+
+.mSelect.open .dropdown.up {
+  border-top: 1px solid #D5D5D5;
+  border-bottom: none;
+  -webkit-box-shadow: 0 -5px 5px 0 rgba(238 238 238);
+  -moz-box-shadow: 0 -5px 5px 0 rgba(238 238 238);
+  -ms-box-shadow: 0 -5px 5px 0 rgba(238 238 238);
+  box-shadow: 0 -5px 5px 0 rgba(238 238 238);
+}
+
+.mSelect.disabled .value {
+  color: #E2E5EA;
+  background-color: #F4F5F8;
+}
+
+.mSelect.disabled .cover {
+  cursor: not-allowed;
+}
+
+.mSelect.error .value {
+  color: #F52247;
+  border-color: #F52247;
+  box-shadow: 0 0 0 3px #F6B7C2;
+}
+
+.mSelect.typeFlag .option li > a,
+.mSelect.typeFlag .value span {
+  display: block;
+  position: relative;
+  padding-left: 39px;
+}
+
+.mSelect.typeFlag .option li > a::before,
+.mSelect.typeFlag .value span::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+  background-image: url('//img.echosting.web_app.com/api/generator/admin/sfix_flag.png');
+  background-repeat: no-repeat;
+}
+
+.mSelect.typeFlag .value {
+  padding-left: 0;
+}
+
+.mSelect.typeFlag .ko_KR::before {
+  background-position: 0 0;
+}
+
+.mSelect.typeFlag .en_GB::before {
+  background-position: -50px 0;
+}
+
+.mSelect.typeFlag .ja_JP::before {
+  background-position: -100px 0;
+}
+
+.mSelect.typeFlag .vi_VN::before {
+  background-position: -150px 0;
+}

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+if [ "$APPS_ENV" = 'prod' ]; then
+  rsync -rt /docker/prod/apache/ /home/apps/apache
+  rsync -rt /docker/prod/php/ /home/apps/php
+elif [ "$APPS_ENV" = 'qa' ]; then
+  rsync -rt /docker/qa/apache/ /home/apps/apache
+  rsync -rt /docker/qa/php/ /home/apps/php
+fi
+
+exec "$@"

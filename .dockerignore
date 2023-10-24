@@ -1,0 +1,14 @@
+.git
+**/.git
+.hg
+**/.hg
+.ipynb_checkpoints
+notebooks
+unused
+Dockerfile
+.DS_Store
+.gitignore
+README.md
+env.*
+devops/**
+.gitlab-ci.yml

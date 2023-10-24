@@ -1,0 +1,208 @@
+.search-filter {
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.search-filter input:focus {
+  border: 1px solid #3971FF;
+}
+
+.duet-date__input:focus {
+  box-shadow: none;
+}
+
+.search-filter__row {
+  border: 1px solid #E9EBED;
+  display: flex;
+}
+
+.search-filter__row-half {
+  display: flex;
+  flex: 1;
+}
+
+.search-filter__label {
+  width: 150px;
+  background: #FAFAFB;
+  padding: 13px 8px;
+  line-height: 18px;
+  border: 1px solid #E9EBED;
+  border-top: 0;
+  border-bottom: 0;
+  color: #1B1E26;
+}
+
+.search-filter__search-box {
+  border: 1px solid #D6DAE1;
+  margin: 8px;
+  outline: none;
+  border-radius: 3px;
+  padding: 5px 25px 5px 8px;
+  position: relative;
+  background: url('../../../img/search-icon.svg') no-repeat 415px;
+  width: 440px;
+}
+
+input[type='text'].search-filter__search-box {
+  outline: 0;
+}
+
+.search-filter__more-filter-btn {
+  border: 1px solid #AEB4C6;
+  padding: 5px 22px 5px 8px;
+  border-radius: 3px;
+  line-height: 18px;
+  margin: 8px 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.search-filter__more-filter-btn::before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 8px;
+  height: 6px;
+  background-image: url('../../../img/dropdown-arrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.search-filter__selection {
+  display: flex;
+  align-items: center;
+  margin: 8px 0 8px 8px;
+}
+
+.search-filter__selection li {
+  margin-right: 4px;
+  border: 1px solid #AEB4C6;
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+
+.search-filter__selection li:hover {
+  cursor: pointer;
+}
+
+.search-filter__selection li.active {
+  background-color: #F4F9FF;
+}
+
+.search-filter__btn-grp {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.search-filter__btn-grp .feed-button-reset {
+  margin-right: 7px;
+}
+
+.search-filter__radio {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}
+
+.search-filter__radio div {
+  margin-right: 24px;
+}
+
+.search-filter__radio label {
+  vertical-align: middle;
+}
+
+.search-filter__radio input[type='radio']:checked + label {
+  font-weight: bold;
+}
+
+.search-filter__row--hide {
+  display: none;
+}
+
+/* For date picker */
+.duet-date {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.duet-date__row td.duet-date__cell:nth-child(1) button {
+  color: red;
+}
+
+.duet-date__select--month:focus {
+  outline: none !important;
+}
+
+.duet-date__day.is-today {
+  box-shadow: 0 0 0 1px #DADEE4;
+}
+
+.duet-date__day:hover::before,
+.duet-date__day.is-today::before {
+  background: #DADEE4;
+}
+
+.duet-date__prev,
+.duet-date__next {
+  background: none;
+}
+
+.duet-date__input {
+  width: 94px;
+  height: 28px;
+  padding: 8px 5px;
+  border: 1px solid #D6DAE1;
+}
+
+.duet-date__start-date .duet-date__toggle,
+.duet-date__end-date .duet-date__toggle {
+  box-shadow: none;
+  border: 0;
+  background: none;
+  width: auto;
+  right: -29px;
+}
+
+.duet-date__end-date .duet-date__input {
+  margin-left: 38px;
+}
+
+.duet-date__end-date::before {
+  content: '~';
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 16px;
+  height: 16px;
+  right: 90px;
+}
+
+.duet-date__toggle-icon svg {
+  display: none;
+}
+
+.duet-date__toggle::before {
+  content: '';
+  position: absolute;
+  left: -23px;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  background-image: url('../../../img/calendar.svg');
+}
+
+/* rotate dropdown icon */
+.search-filter__more-filter-btn.search-filter__more-filter-btn--rotate::before {
+  transform: translate(0, -50%) rotate(180deg);
+}
+
+/* dropdown search filter  */
+.search-filter__dropdown.mSelect {
+  width: 170px;
+}

@@ -1,0 +1,196 @@
+.feed-button {
+  font-family: 'Dotum', sans-serif !important;
+  display: inline-block;
+  border: 1px solid #AEB4C6;
+  border-radius: 3px;
+  padding: 5px 8px 5px 6px;
+  font-size: 12px;
+  color: #1B1E26;
+
+  /* for button with links */
+  text-decoration: none;
+}
+
+.feed-button:hover {
+  cursor: pointer;
+  background: #F4F9FF;
+  text-decoration: none;
+}
+
+.blog-feed__buttons > .feed-button:not(.feed-button:last-of-type) {
+  margin-right: 4px;
+}
+
+/* margin on left and right for main-wrap buttons */
+#main-wrap .feed-button--disable,
+#main-wrap .feed-button--refresh,
+.feed-button--remove {
+  margin: 0 4px;
+}
+
+/* For buttons with icons */
+.feed-button--delete,
+.feed-button--refresh,
+.feed-button--create {
+  position: relative;
+  padding-left: 22px;
+}
+
+.feed-button--delete::before,
+.feed-button--refresh::before,
+.feed-button--create::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-right: 4px;
+  background-size: cover;
+}
+
+/* Delete button icon */
+.feed-button--delete::before {
+  width: 16px;
+  height: 16px;
+  background-image: url('../../../img/delete-icon.svg');
+}
+
+/* Refresh button icon */
+.feed-button--refresh::before {
+  width: 14px;
+  height: 14px;
+  background-image: url('../../../img/refresh-icon.svg');
+}
+
+/* Create button */
+.feed-button--create,
+.feed-button--search {
+  background-color: var(--main-color);
+  color: #FFFFFF;
+  border: 1px solid var(--main-color);
+}
+
+.feed-button--create:hover {
+  background-color: #667084;
+  border: 1px solid #667084;
+  text-decoration: none;
+}
+
+.feed-button--search:hover,
+.feed-button--save:hover {
+  filter: brightness(85%);
+  background-color: var(--main-color);
+}
+
+.feed-button--create::before {
+  width: 10px;
+  height: 10px;
+  left: 9px;
+  background-image: url('../../../img/create-icon-white.svg');
+}
+
+/* Edit button */
+.feed-button--edit {
+  padding: 5px 8px;
+}
+
+/* Back button */
+.feed-button--back {
+  position: relative;
+  padding-left: 22px;
+}
+
+.feed-button--back::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translate(0, -50%) rotate(180deg);
+  margin-right: 4px;
+  background-size: cover;
+  width: 6px;
+  height: 10px;
+  background-image: url('../../../img/right-arrow-pagination.svg');
+}
+
+.feed-button--loc-selector {
+  position: relative;
+  padding-left: 26px;
+  margin: 8px;
+}
+
+.feed-button--loc-selector::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-right: 4px;
+  background-size: cover;
+  width: 11px;
+  height: 10px;
+  background-image: url('../../../img/loc-selector.svg');
+}
+
+.feed-button--save {
+  border: 4px;
+  height: 40px;
+  width: 105px;
+  line-height: 32px;
+  color: #FFFFFF;
+  background-color: var(--main-color);
+}
+
+.feed-button--reset-setting {
+  position: relative;
+  padding-left: 22px;
+}
+
+.feed-button--reset-setting::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-right: 4px;
+  background-size: cover;
+  width: 14px;
+  height: 14px;
+  background-image: url('../../../img/refresh-icon.svg');
+}
+
+/* Disabled button */
+.feed-button--disabled {
+  opacity: 0.25;
+}
+
+.feed-button--disabled:hover {
+  background: none;
+  cursor: not-allowed;
+}
+
+/* Edit post button */
+.feed-button--edit-post {
+  background-color: #FFFFFF;
+  width: 28px;
+  height: 28px;
+}
+
+.feed-button--edit-post-save {
+  background-color: #FFFFFF;
+  width: 43px;
+  height: 28px;
+}
+
+.feed-button--edit-post::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-right: 4px;
+  background-size: cover;
+  width: 14px;
+  height: 14px;
+  background-image: url('../../../img/edit-post-icon.svg');
+}

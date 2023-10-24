@@ -1,0 +1,12 @@
+.alerts {
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  font-family: 'Malgun', sans-serif;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+
+.alerts-title {
+  margin: 1rem 0;
+}

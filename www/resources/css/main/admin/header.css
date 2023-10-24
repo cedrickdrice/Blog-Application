@@ -1,0 +1,100 @@
+.header {
+  background-color: #FFFFFF;
+  padding: 16px 8px 0;
+  font-family: 'Malgun', sans-serif;
+}
+
+.header__breadcrumbs {
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__breadcrumbs-links {
+  margin-left: 13px;
+  color: #667084;
+}
+
+.header__breadcrumbs-links a {
+  color: #AEB4C6;
+  position: relative;
+}
+
+.header__breadcrumbs-links a:hover {
+  text-decoration: none;
+}
+
+/* breadcrumb icon */
+.header__breadcrumbs-links a::before {
+  position: absolute;
+  content: '>';
+  right: -10px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #DDE2EB;
+}
+
+.header__logo-area,
+.header__ul {
+  display: flex;
+  align-items: center;
+}
+
+.header__a {
+  font-size: 10px;
+  line-height: 13px;
+  text-transform: uppercase;
+  color: #969DAA;
+  text-decoration: none;
+  position: relative;
+}
+
+.header__a--manual::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: -20px;
+  top: 0;
+  background: url('../../../img/manual-icon.png') no-repeat 0 0;
+}
+
+.header__a--toggle {
+  display: flex;
+  align-items: center;
+}
+
+.header__li {
+  padding: 0 8px 0 18px;
+  border-right: 1px solid #667084;
+}
+
+.header__li:first-of-type:hover > .header__a--manual {
+  color: #3971FF;
+  text-decoration: none;
+}
+
+.header__li:first-of-type:hover > .header__a--manual::before {
+  filter: brightness(50%);
+}
+
+.header__li--no-border {
+  border-right: 0;
+}
+
+.header__app-name {
+  margin-left: 4px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header__app-name:hover {
+  color: #3971FF;
+  cursor: pointer;
+}

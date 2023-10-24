@@ -1,0 +1,18 @@
+/* Color variables */
+:root {
+  --main-color: #3971FF;
+}
+
+html:lang(en) body {
+  background-color: #F3F3F3;
+}
+
+html:lang(en) select {
+  font-family: 'Dotum', sans-serif !important;
+}
+
+#main-wrap {
+  max-width: 1016px;
+  margin: 16px auto;
+  background-color: #FFFFFF;
+}
